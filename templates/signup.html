@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+
+<!-- Card -->
+<div class="ex1">
+
+  <div class="pt-4 pb-3">
+
+    <h5 class="text-center mt-1 mb-4">Sign Up</h5>
+
+    <form action = "http://localhost:5000/signup_process" method ='post'>
+
+      <div class="form-row">
+        <div class="col">
+          <div class="md-form md-outline mt-0">
+            <input type="text" name ="materialRegisterFormFirstName" class="form-control">
+            <label for="materialRegisterFormFirstName">First name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="md-form md-outline mt-0">
+            <input type="text" name ="materialRegisterFormLastName" class="form-control">
+            <label for="materialRegisterFormLastName">Last name</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-form md-outline mt-0">
+        <input type="email" name ="defaultForm-email2" class="form-control">
+        <label data-error="wrong" data-success="right" for="defaultForm-email2">Your email</label>
+      </div>
+      <div class="md-form md-outline mt-0">
+        <input type="password" name ="defaultForm-pass2" class="form-control">
+        <label data-error="wrong" data-success="right" for="defaultForm-pass2">Your password</label>
+        <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          At least 8 characters and 1 digit
+        </small>
+      </div>
+
+      <div class="md-form md-outline">
+        <input type="number" name ="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
+        <label for="materialRegisterFormPhone">Phone number</label>
+        <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-3">
+          Optional - for two step authentication
+        </small>
+      </div>
+      <div class="text-center mb-2">
+
+        <button type="submit" class="btn btn-primary mb-4">Sign Up</button>
+        <p>By clicking
+          <em>Sign up</em> you agree to our
+          <a href="" target="_blank">terms of service</a>
+        </p>
+      </div>
+    </form>
+    </div>
+
+  </div>
+
+</div>
+<!-- Card -->
+
+
+{% endblock %}
